@@ -1,0 +1,46 @@
+---
+import ArrowRightTop from "../Icon/ArrowRightTop.astro";
+interface Props {
+  año: number;
+  nombre: string;
+  tecnologias: string[];
+  link: string;
+}
+const { año, nombre, tecnologias, link } = Astro.props;
+---
+
+<tr class="border-b border-secondary-white border-opacity-20 last:border-0">
+  <td class="py-4 lg:py-6 pr-4 text-sm font-medium text-secondary-white"
+    ><p class="text-secondary-white">{año}</p></td
+  >
+  <td class="py-4 lg:py-6 pr-4 font-medium capitalize"
+    ><span class="">{nombre}</span></td
+  >
+  <td class="hidden lg:table-cell py-4 lg:py-6 pr-4">
+    <ul class="flex gap-2 text-xs flex-wrap">
+      {
+        tecnologias.map((tecnologia) => (
+          <li class="py-2 px-3 rounded-full font-medium capitalize">
+            {tecnologia}
+          </li>
+        ))
+      }
+    </ul>
+  </td>
+  <td class="py-4 lg:py-6 pr-4 hidden sm:table-cell">
+    <a
+      class="font-medium text-sm flex gap-2 items-center"
+      href={link}
+      target="_blank"
+      >{link.replaceAll("https://", "").replaceAll("/", "")}
+      <ArrowRightTop class="h-5 w-5 pt-[1px]" />
+    </a>
+  </td>
+</tr>
+
+<style>
+  li {
+    background-color: rgba(242, 242, 242, 0.1);
+    border: 1px solid rgba(242, 242, 242, 0.1);
+  }
+</style>
