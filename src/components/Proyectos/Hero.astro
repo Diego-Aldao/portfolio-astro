@@ -3,39 +3,84 @@ import ArrowBottom from "../Icon/ArrowBottom.astro";
 ---
 
 <div
-  class="hero pb-10 pt-14 md:pt-20 lg:pt-28 flex flex-col gap-5 sm:max-w-[650px] max-w-[500px] md:max-w-[700px] lg:max-w-[930px] mx-auto relative z-[2]"
+  class="hero pt-36 px-4 md:px-10 lg:px-12 2xl:px-0 md:pt-44 lg:pt-48 flex flex-col gap-5 relative z-[2] max-w-7xl mx-auto"
 >
-  <div class="nombre flex gap-2 items-center md:hidden">
-    <div class="punto bg-white h-2 w-2 rounded-full"></div>
-    <span
-      class="capitalize font-medium text-secondary-white tracking-tight text-[16px]"
-      >diego aldao — desarrollador web</span
-    >
+  <div
+    class="hero__noise opacity-60 mix-blend-overlay z-0 absolute block top-0 left-0 right-0 bottom-0 after:absolute after:w-full after:h-full after:top-0 after:left-0 w-full"
+  >
   </div>
-  <h1
-    class="text-4xl sm:text-5xl md:text-[54px] md:leading-[1.1] lg:text-7xl flex flex-col font-semibold"
+  <div
+    class="hero__main-content flex flex-col gap-4 max-w-[600px] md:max-w-[700px] lg:max-w-[950px] xl:max-w-full mx-auto relative z-10"
   >
-    <span class="first-letter:uppercase">creo productos digitales.</span>
-    <span class="first-letter:uppercase"
-      >apasionado por el código y la creatividad web</span
+    <div
+      class="hero__main-content__nombre flex gap-2 items-center sm:justify-center md:hidden"
     >
-  </h1>
-
-  <button
-    class="text-sm capitalize flex gap-2 items-center w-fit mx-auto py-2 px-2 mt-5 md:mt-14 xl:mt-20"
-  >
-    <ArrowBottom class="h-6 w-6 md:w-9 md:h-9" />
-    <span class="text-secondary-white md:text-lg"> últimos proyectos</span>
-  </button>
+      <span
+        class="hero__main-content__nombre__punto bg-white h-2 w-2 rounded-full"
+      ></span>
+      <span
+        class="capitalize font-medium text-secondary-white tracking-tight text-[16px]"
+        >diego aldao — desarrollador web</span
+      >
+    </div>
+    <h1
+      class="hero__main-content__title text-3xl md:text-[40px] md:leading-none sm:text-center lg:text-[52px] xl:text-[64px] 2xl:text-7xl flex flex-col font-semibold"
+    >
+      <span class="first-letter:uppercase"
+        >desarrollando soluciones digitales.</span
+      >
+      <span class="first-letter:uppercase"
+        >apasionado por el código y la creatividad web.</span
+      >
+    </h1>
+    <a
+      href="#proyectos"
+      class="hero__main-content__button text-sm group capitalize flex gap-2 items-center w-fit mx-auto py-2 px-4 mt-10 md:mt-14 lg:mt-20 xl:mt-24"
+    >
+      <ArrowBottom
+        class="h-6 w-6 md:w-9 md:h-9 relative group-hover:translate-y-1 -translate-y-1 custom-transition text-secondary-white group-hover:text-main-white"
+      />
+      <span
+        class="text-secondary-white group-hover:text-main-white md:text-lg font-medium"
+        >últimos proyectos</span
+      >
+    </a>
+  </div>
 </div>
+
 <style>
-  h1 {
+  .hero {
+    background-image: radial-gradient(
+      circle at 50% 0,
+      rgba(242, 242, 242, 0.3),
+      rgba(0, 0, 0, 0) 80%
+    );
+  }
+  .hero__noise {
+    background-image: url("../../assets/644af0299bc01254815ae442_noise-overlay-2.png");
+    background-position: 0 0;
+    background-size: 200px;
+  }
+  .hero__noise:after {
+    background: radial-gradient(circle at 50% 0, rgba(0, 0, 0, 0) 10%, #101010);
+  }
+  .hero__main-content__nombre__punto {
+    box-shadow: 0px 0px 5px #f2f2f2;
+  }
+  .hero__main-content__title {
     text-shadow:
       0 5px 15px rgba(0, 87, 255, 0.2),
       0 -5px 15px rgba(255, 90, 0, 0.2),
       0 0 30px rgba(255, 255, 255, 0.2);
   }
-  .punto {
-    box-shadow: 0px 0px 5px #f2f2f2;
+  /*MEDIA QUERIES */
+  @media (min-width: 768px) {
+    .hero {
+      background-image: radial-gradient(
+        circle at 50% 0,
+        rgba(242, 242, 242, 0.25),
+        rgba(0, 0, 0, 0) 80%
+      );
+    }
   }
 </style>
