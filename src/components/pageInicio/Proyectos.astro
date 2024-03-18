@@ -1,0 +1,41 @@
+---
+import { Image } from "astro:assets";
+import ArrowRight from "../Icon/ArrowRight.astro";
+import Card from "./CardProyecto/Card.astro";
+import SectionProyectos from "../../containers/pageInicio/section-proyectos.astro";
+import Tecnologia from "../reactComponents/Tecnologia";
+import { listadoProyectos } from "../../data/mainProyects";
+---
+
+<SectionProyectos>
+  {
+    listadoProyectos.map(
+      ({ titulo, año, descripcion, link, tecnologias, imagen }) => (
+        <Card titulo={titulo} año={año} descripcion={descripcion} link={link}>
+          <div
+            class="flex gap-2 md:gap-3 lg:gap-4 items-center font-medium"
+            slot="tecnologias"
+          >
+            {tecnologias.map(({ nombre }) => (
+              <Tecnologia nombre={nombre} client:visible />
+            ))}
+          </div>
+
+          <Image src={imagen} alt="imagen del proyecto odyssey" slot="imagen" />
+        </Card>
+      )
+    )
+  }
+  <a
+    href="/archivo"
+    class="button__mas-proyectos custom-transition flex w-fit items-center mx-auto gap-2 py-2 px-4 rounded-lg font-medium md:text-lg text-secondary-white group hover:text-main-white"
+  >
+    <span
+      class="text-secondary-white group-hover:text-main-white custom-transition"
+      >Ver todos mis proyectos</span
+    >
+    <ArrowRight
+      class="h-6 w-6 relative group-hover:translate-x-2 custom-transition"
+    /></a
+  >
+</SectionProyectos>
