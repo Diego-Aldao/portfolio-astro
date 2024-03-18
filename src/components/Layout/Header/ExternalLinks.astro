@@ -1,0 +1,131 @@
+---
+import ArrowRightTop from "../../Icon/ArrowRightTop.astro";
+import Arroba from "../../Icon/Arroba.astro";
+---
+
+<div class="right-menu flex-1 flex justify-end">
+  <div
+    data-dropdown-button
+    class="right-menu__dropdown-button rounded-full overflow-hidden h-11 w-11 md:hidden flex items-center justify-center pointer-events-auto"
+  >
+    <Arroba class="text-main-white w-6 h-6" />
+  </div>
+  <ul
+    data-dropdown-list
+    class="right-menu__dropdown custom-transition md:hidden dropdown absolute right-4 -bottom-16 p-2 rounded-xl h-fit w-fit pointer-events-auto"
+  >
+    <li class="right-menu__dropdown__link rounded-xl">
+      <a
+        class="flex justify-between items-center capitalize text-xs h-12 px-4 font-medium"
+        href="https://www.linkedin.com/in/diego-aldao"
+        target="_blank"
+      >
+        linkedin <ArrowRightTop class="h-4 w-4" />
+      </a>
+    </li>
+    <li class="right-menu__dropdown__link rounded-xl">
+      <a
+        class="flex justify-between gap-5 items-center capitalize text-xs h-12 px-4 font-medium"
+        href="/DiegoAldaoCV.pdf"
+        target="_blank"
+      >
+        curriculum <ArrowRightTop class="h-4 w-4" />
+      </a>
+    </li>
+  </ul>
+  <div
+    class="right-menu__desktop-buttons botones hidden md:flex gap-2 lg:gap-5"
+  >
+    <div
+      class="right-menu__desktop-buttons__link group relative rounded-xl overflow-hidden"
+    >
+      <div
+        class="right-menu__desktop-buttons__link__background custom-transition group-hover:opacity-100 opacity-0 h-full w-full absolute top-0 left-0"
+      >
+      </div>
+      <a
+        href="https://www.linkedin.com/in/diego-aldao"
+        target="_blank"
+        class="flex gap-1 items-center relative z-1 capitalize text-sm h-12 px-2 lg:px-4 font-medium pointer-events-auto"
+      >
+        linkedin <ArrowRightTop class="h-5 w-5" />
+      </a>
+    </div>
+    <div
+      class="right-menu__desktop-buttons__link group link relative rounded-xl overflow-hidden"
+    >
+      <div
+        class="right-menu__desktop-buttons__link__background custom-transition group-hover:opacity-100 opacity-0 h-full w-full absolute top-0 left-0"
+      >
+      </div>
+      <a
+        href="DiegoAldaoCV.pdf"
+        target="_blank"
+        class="flex rounded-xl gap-1 items-center capitalize text-sm h-12 px-2 lg:px-4 font-medium pointer-events-auto"
+      >
+        curriculum <ArrowRightTop class="h-5 w-5" />
+      </a>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener("astro:page-load", () => {
+    const botonLinks = document.querySelector("[data-dropdown-button]");
+    const dropdown = document.querySelector("[data-dropdown-list]");
+
+    const toggleCSSclasses = (element: Element, ...clases: string[]) =>
+      clases.map((cl) => element?.classList.toggle(cl));
+
+    botonLinks?.addEventListener("click", () => {
+      if (!dropdown) return;
+      toggleCSSclasses(dropdown, "right-menu__dropdown--visible");
+    });
+  });
+</script>
+
+<style>
+  .right-menu__desktop-buttons__link {
+    backdrop-filter: blur(15px);
+  }
+  .right-menu__desktop-buttons__link__background {
+    background: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0),
+      rgba(242, 242, 242, 0.15)
+    );
+  }
+  .right-menu__dropdown {
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
+    background-color: rgba(242, 242, 242, 0.05);
+    border: 1px solid rgba(242, 242, 242, 0.1);
+  }
+  /*DROPDOWN  MENU MOBILE */
+  .right-menu__dropdown {
+    opacity: 0;
+    visibility: hidden;
+    transform: translate3d(36px, -24px, 0px) scale3d(0.5, 0.5, 1);
+    transform-style: preserve-3d;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  }
+
+  .right-menu__dropdown__link:hover {
+    background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0),
+      rgba(242, 242, 242, 0.05)
+    );
+  }
+  .right-menu__dropdown--visible {
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1);
+    transform-style: preserve-3d;
+    visibility: visible;
+  }
+  .right-menu__dropdown-button {
+    backdrop-filter: blur(15px);
+    background-color: rgba(242, 242, 242, 0.05);
+    border: 1px solid rgba(242, 242, 242, 0.1);
+  }
+</style>
