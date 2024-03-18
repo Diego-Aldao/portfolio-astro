@@ -1,0 +1,52 @@
+---
+interface Props {
+  footerLogo?: boolean;
+}
+
+const { footerLogo } = Astro.props;
+---
+
+<a
+  href="/"
+  class="logo cursor-pointer flex gap-2 w-fit py-[2px] pr-2 rounded-lg pointer-events-auto"
+>
+  <div
+    class="uppercase flex text-2xl gap-[6px] md:text-3xl rounded-sm w-fit font-medium"
+  >
+    <span
+      class="logo__letra flex items-center justify-center relative overflow-hidden w-[17px] -skew-x-[30deg] mb-3 -right-1"
+    >
+      <span class="block relative -right-[5px] skew-x-[5deg]">d</span>
+    </span>
+    <span class="logo__linea bg-white w-[2px] h-12 -skew-x-[30deg] block"
+    ></span>
+    <span
+      class="logo__letra flex items-center justify-center mt-3 relative overflow-hidden w-[17px] -skew-x-[30deg] -left-1"
+    >
+      <span class="block relative -left-[7px] skew-x-[20deg]">a</span>
+    </span>
+  </div>
+  <span
+    class:list={[
+      "logo__descripcion",
+      {
+        "flex flex-col": footerLogo,
+        "hidden md:flex flex-col": !footerLogo,
+      },
+    ]}
+  >
+    <span class="capitalize text-xl font-medium">diego aldao</span>
+    <span class="capitalize text-xs text-secondary-white font-medium"
+      >desarrollador web</span
+    >
+  </span>
+</a>
+
+<style>
+  @media (min-width: 768px) {
+    .logo {
+      backdrop-filter: blur(15px);
+      background-color: rgba(242, 242, 242, 0.05);
+    }
+  }
+</style>
