@@ -1,0 +1,99 @@
+---
+const currentPath = Astro.url.pathname;
+---
+
+<div
+  data-middleMenu-div
+  class="navbar__middle-menu rounded-3xl justify-between items-center flex relative overflow-hidden p-1 sm:p-[6px] gap-2 pointer-events-auto"
+>
+  <div
+    data-middleMenu-background
+    class={`middle-menu__bg-pill custom-transition bg-[#f2f2f20d] left-[5px] w-[93px] flex after:-top-1 justify-center after:rounded-full after:w-5 after:h-[2px] h-[32px] absolute rounded-full px-4 sm:left-[6px] ${currentPath === "/archivo" ? "pill-bg-right" : "pill-bg-left"}`}
+  >
+  </div>
+  <a
+    data-middleMenu-button
+    href="/"
+    class="middle-menu__pill cursor-pointer z-[2] pill-inicio capitalize p-2 text-xs md:text-sm rounded-full px-4 font-medium"
+    >inicio</a
+  >
+  <a
+    data-middleMenu-button
+    href="/archivo"
+    class="middle-menu__pill cursor-pointer z-[2] pill-archivo capitalize p-2 text-xs md:text-sm rounded-full px-4 font-medium"
+    >archivo</a
+  >
+</div>
+
+<script>
+  document.addEventListener("astro:page-load", () => {
+    // con el view transition, es posible que algunos scripts ya no se vuelvan a ejecutar después de la navegación de la página. Para evitar ese error, se agrega el evento astro:page-load
+    const bgPill = document.querySelector("[data-middleMenu-background]");
+    const botonesNav = document.querySelectorAll("[data-middleMenu-button]");
+
+    const toggleMiddleMenuBackground = (clases: DOMTokenList) => {
+      if (!bgPill) return;
+      if (clases.contains("pill-archivo")) {
+        bgPill.classList.add("pill-bg-right");
+      } else {
+        bgPill.classList.remove("pill-bg-right");
+      }
+    };
+
+    botonesNav.forEach((boton) => {
+      boton.addEventListener("click", () => {
+        toggleMiddleMenuBackground(boton.classList);
+      });
+    });
+  });
+</script>
+
+<style>
+  .navbar__middle-menu {
+    backdrop-filter: blur(15px);
+    background-color: rgba(242, 242, 242, 0.05);
+    border: 1px solid rgba(242, 242, 242, 0.1);
+    transition:
+      box-shadow 1s cubic-bezier(0.23, 1, 0.32, 1),
+      border 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+  .navbar__middle-menu:hover {
+    background-color: rgba(242, 242, 242, 0.08);
+    border-color: rgba(242, 242, 242, 0.2);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+  }
+  /*ILUMINACION */
+  .middle-menu__bg-pill::after {
+    content: "";
+    position: absolute;
+    box-shadow: 0px 2px 30px 7px var(--main-white);
+    background-color: var(--main-white);
+  }
+
+  /*BG FOR CURRENT PILL */
+  .pill-bg-left {
+    width: 63.91px;
+  }
+  .pill-bg-right {
+    left: 75.5px;
+    width: 77.8px;
+  }
+
+  @media (min-width: 640px) {
+    .pill-bg-right {
+      left: 77px;
+    }
+  }
+  @media (min-width: 768px) {
+    .pill-bg-left {
+      height: 36px;
+      width: 71px;
+      height: 36px;
+    }
+    .pill-bg-right {
+      height: 36px;
+      left: 80px;
+      width: 88px;
+    }
+  }
+</style>
