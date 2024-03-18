@@ -1,5 +1,6 @@
 ---
 import ArrowBottom from "../Icon/ArrowBottom.astro";
+import ArrowRightTop from "../Icon/ArrowRightTop.astro";
 ---
 
 <div
@@ -33,18 +34,35 @@ import ArrowBottom from "../Icon/ArrowBottom.astro";
         >apasionado por el código y la creatividad web.</span
       >
     </h1>
-    <a
-      href="#proyectos"
-      class="hero__main-content__button text-sm group capitalize flex gap-2 items-center w-fit mx-auto py-2 px-4 mt-10 md:mt-14 lg:mt-20 xl:mt-24"
+    <div
+      class="hero__main-content__links flex gap-16 lg:gap-10 xl:gap-20 2xl:gap-28 flex-col sm:mt-5 md:mt-10 lg:mt-16 2xl:mt-24 items-center justify-center sm:flex-row-reverse"
     >
-      <ArrowBottom
-        class="h-6 w-6 md:w-9 md:h-9 relative group-hover:translate-y-1 -translate-y-1 custom-transition text-secondary-white group-hover:text-main-white"
-      />
-      <span
-        class="text-secondary-white group-hover:text-main-white md:text-lg font-medium"
-        >últimos proyectos</span
+      <a
+        href="https://github.com/Diego-Aldao"
+        target="_blank"
+        class="hero__main-content__links__button text-sm group flex gap-2 items-center w-fit py-2 px-4 self-end"
       >
-    </a>
+        <span
+          class="text-secondary-white group-hover:text-main-white lg:text-lg font-medium custom-transition"
+          >Perfil de Github</span
+        >
+        <ArrowRightTop
+          class="h-5 w-5 md:w-7 md:h-7 relative md:group-hover:translate-x-[2px] md:group-hover:-translate-y-1 md:-translate-x-[2px] md:-translate-y-[2px] custom-transition text-secondary-white group-hover:text-main-white"
+        />
+      </a>
+      <a
+        href="#proyectos"
+        class="hero__main-content__links__button text-sm group flex gap-2 items-center w-fit py-2 px-4 self-start"
+      >
+        <ArrowBottom
+          class="h-5 w-5 md:w-7 md:h-7 relative group-hover:translate-y-[2px] -translate-y-[2px] custom-transition text-secondary-white group-hover:text-main-white"
+        />
+        <span
+          class="text-secondary-white group-hover:text-main-white lg:text-lg font-medium custom-transition"
+          >Últimos proyectos</span
+        >
+      </a>
+    </div>
   </div>
 </div>
 
@@ -65,7 +83,7 @@ import ArrowBottom from "../Icon/ArrowBottom.astro";
     background: radial-gradient(circle at 50% 0, rgba(0, 0, 0, 0) 10%, #101010);
   }
   .hero__main-content__nombre__punto {
-    box-shadow: 0px 0px 5px #f2f2f2;
+    box-shadow: 0px 0px 5px var(--main-white);
   }
   .hero__main-content__title {
     text-shadow:
