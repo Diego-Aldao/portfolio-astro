@@ -71,6 +71,7 @@ import Arroba from "../../Icon/Arroba.astro";
 
 <script>
   document.addEventListener("astro:page-load", () => {
+    // con el view transition, es posible que algunos scripts ya no se vuelvan a ejecutar después de la navegación de la página. Para evitar ese error, se agrega el evento astro:page-load
     const botonLinks = document.querySelector("[data-dropdown-button]");
     const dropdown = document.querySelector("[data-dropdown-list]");
 
