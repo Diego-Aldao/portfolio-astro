@@ -1,0 +1,40 @@
+---
+import ArrowLeft from "../../components/Icon/ArrowLeft.astro";
+---
+
+<main
+  class="w-full relative mx-auto px-4 md:px-10 pt-32 md:pt-36 lg:pt-44 lg:px-12 xl:px-0 max-w-5xl xl:max-w-6xl pb-10"
+>
+  <header
+    class="flex flex-col items-center w-full gap-2 lg:gap-10 mx-auto max-w-5xl xl:max-w-6xl relative top-10 z-10"
+    ,
+  >
+    <a
+      data-back-button
+      href="/"
+      class="main-button flex items-center text-xs lg:text-base self-start gap-2 capitalize font-medium rounded-full py-2 px-4 lg:px-5"
+      ><ArrowLeft class="w-4 lg:h-6 lg:w-6 h-4" />atras</a
+    >
+    <h1
+      class="text-4xl uppercase self-start font-bold md:text-5xl lg:text-6xl 2xl:text-7xl mt-5"
+    >
+      todos mis proyectos
+    </h1>
+  </header>
+  <slot name="main-content" />
+</main>
+
+<script>
+  document.addEventListener("astro:page-load", () => {
+    // con el view transition, es posible que algunos scripts ya no se vuelvan a ejecutar después de la navegación de la página. Para evitar ese error, se agrega el evento astro:page-load
+    const bgPill = document.querySelector("[data-middleMenu-background]");
+    const botonAtras = document.querySelector("[data-back-button]");
+
+    const toggleMiddleMenuBackground = () => {
+      bgPill?.classList.toggle("pill-bg-right");
+      bgPill?.classList.toggle("pill-bg-left");
+    };
+
+    botonAtras?.addEventListener("click", toggleMiddleMenuBackground);
+  });
+</script>
