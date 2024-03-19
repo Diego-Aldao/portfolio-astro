@@ -1,0 +1,24 @@
+---
+import Layout from "../layouts/Layout.astro";
+import MainSection from "../containers/pageArchivo/main-section.astro";
+import TableRow from "../components/pageArchivo/TableRow.astro";
+import proyectos from "../data/dataArchivo.json";
+import Table from "../components/pageArchivo/Table.astro";
+---
+
+<Layout title="Archivo — Diego Aldao">
+  <MainSection>
+    <Table slot="main-content">
+      {
+        proyectos.map(({ año, nombre, link, tecnologias }) => (
+          <TableRow
+            año={año}
+            nombre={nombre}
+            link={link}
+            tecnologias={tecnologias}
+          />
+        ))
+      }
+    </Table>
+  </MainSection>
+</Layout>
