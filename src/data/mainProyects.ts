@@ -1,8 +1,8 @@
 import type { Proyecto } from "../types/types";
-import odyssey from "../assets/Odyssey.png";
-import akira from "../assets/Akira.png";
-import movieverse from "../assets/Movieverse.png";
-import valorantWiki from "../assets/valorantWiki.png";
+import odyssey from "../assets/odyssey.webp";
+import akira from "../assets/akira.webp";
+import movieverse from "../assets/movieverse.webp";
+import valorantWiki from "../assets/valorantwiki.webp";
 
 export const listadoProyectos: Proyecto[] = [
   {
