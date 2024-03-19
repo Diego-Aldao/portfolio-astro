@@ -8,7 +8,7 @@ import Table from "../components/pageArchivo/Table.astro";
 
 <Layout title="Archivo — Diego Aldao">
   <MainSection>
-    <Table slot="main-content">
+    <Table>
       {
         proyectos.map(({ año, nombre, link, tecnologias }) => (
           <TableRow
