@@ -1,0 +1,69 @@
+---
+import ArrowRightTop from "../Icon/ArrowRightTop.astro";
+import Github from "../Icon/Github.astro";
+import Logo from "../Logo.astro";
+---
+
+<footer
+  class="footer max-w-7xl mx-auto flex flex-wrap gap-14 items-start pt-10 lg:pt-16 px-4 md:px-10 lg:px-12 2xl:px-0"
+>
+  <div class="footer__contenedor-logo w-full sm:w-fit sm:mr-auto">
+    <Logo footerLogo={true} />
+  </div>
+  <div class="footer_main-nav flex flex-col gap-5">
+    <span class="text-[10px] font-medium uppercase text-secondary-white"
+      >navegacion</span
+    >
+    <a href="/" class="text-sm font-medium capitalize h-5 flex items-center"
+      >inicio</a
+    >
+    <a
+      href="/archivo"
+      class="text-sm font-medium capitalize h-5 flex items-center">archivo</a
+    >
+  </div>
+  <div class="footer__contacto flex flex-col gap-5">
+    <span class="text-[10px] font-medium uppercase text-secondary-white"
+      >contacto</span
+    >
+    <a
+      href="https://www.linkedin.com/in/diego-aldao"
+      target="_blank"
+      class="flex gap-1 items-center capitalize text-sm font-medium"
+      >linkedin <ArrowRightTop class="h-5 w-5" /></a
+    >
+    <a
+      href="/DiegoAldaoCV.pdf"
+      target="_blank"
+      class="flex gap-1 items-center capitalize text-sm font-medium"
+      >curriculum <ArrowRightTop class="h-5 w-5" /></a
+    >
+  </div>
+  <span
+    class="footer__copy w-full items-center justify-center py-2 md:py-4 text-[10px] lg:text-xs flex gap-1"
+    >Codeado por <a
+      href="https://github.com/Diego-Aldao"
+      class="w-fit flex gap-1 items-center"
+      target="_blank"
+      >Diego
+      <Github class="text-main-white h-4 w-4" />
+    </a></span
+  >
+</footer>
+
+<style>
+  .footer {
+    border-image: linear-gradient(
+        to left,
+        var(--main-black),
+        var(--main-white),
+        var(--main-black)
+      )
+      1;
+    border-width: 1px;
+    border-style: solid;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+  }
+</style>
