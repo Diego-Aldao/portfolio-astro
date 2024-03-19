@@ -57,7 +57,7 @@ export const listadoProyectos: Proyecto[] = [
     año: "2023",
     descripcion:
       "Obtiene información sobre productos y categorías a través de llamadas a  API. Permite buscar, filtrar, y ver en detalle miles de productos. También es posible agregar dichos productos a favoritos o a un carrito de compras.",
-    link: "https://akira-ecommerce.web.app/",
+    link: "https://akira-ecommerce.vercel.app/",
     tecnologias: [
       {
         id: 1,
