@@ -1,0 +1,150 @@
+[
+    {
+        "id": 1,
+        "nombre": "valorant wiki",
+        "año": 2024,
+        "link": "https://wikivalorant.vercel.app/",
+        "tecnologias": [ "next.js", "typeScript", "tailwind CSS", "valorant API"]
+      },
+      {
+        "id": 2,
+        "nombre": "visual blend",
+        "año": 2024,
+        "link": "https://odysseyanime.vercel.app/",
+        "tecnologias": [ "astro", "typeScript", "tailwind CSS", "pexels API"]
+      },
+      {
+        "id": 3,
+        "nombre": "black feather",
+        "año": 2024,
+        "link": "https://odysseyanime.vercel.app/",
+        "tecnologias": [ "astro", "typeScript", "tailwind CSS"]
+      },
+      {
+        "id": 4,
+        "nombre": "portfolio v1",
+        "año": 2023,
+        "link": "https://letdiegodev.vercel.app/",
+        "tecnologias": [ "react", "styled components"]
+      },
+    {
+        "id": 5,
+        "nombre": "odyssey",
+        "año": 2023,
+        "link": "https://odysseyanime.vercel.app/",
+        "tecnologias": [ "react", "typeScript", "tailwind CSS"]
+      },
+      {
+        "id": 6,
+        "nombre": "vision blend",
+        "año": 2023,
+        "link": "https://vision-blend.vercel.app/",
+        "tecnologias": [ "next.js", "typeScript", "tailwind CSS", "pexels API"]
+      },
+      {
+        "id": 7,
+        "nombre": "akira",
+        "año": 2023,
+        "link": "https://akira-ecommerce.vercel.app/",
+        "tecnologias": [ "react", "styled components", "formik"]
+      },
+      {
+        "id": 8,
+        "nombre": "movieVerse",
+        "año": 2023,
+        "link": "https://movieverse-db.netlify.app/",
+        "tecnologias": [ "react", "styled components", "the movie database API"]
+      },
+      {
+        "id": 9,
+        "nombre": "promptsVerse",
+        "año": 2023,
+        "link": "https://promptsverce.vercel.app/",
+        "tecnologias": [ "next.js", "typeScript", "tailwind CSS", "mongodb"]
+      },
+      {
+        "id": 10,
+        "nombre": "echo",
+        "año": 2022,
+        "link": "https://designecho.netlify.app/",
+        "tecnologias": [ "react", "styled components", "formik"]
+      },
+      {
+        "id": 11,
+        "nombre": "covid-19 data",
+        "año": 2022,
+        "link": "https://covid19-data-dev.netlify.app/",
+        "tecnologias": [ "react", "tailwind CSS", "covid-19 API"]
+      },
+      {
+        "id": 12,
+        "nombre": "cotizador cripto",
+        "año": 2022,
+        "link": "https://comparacion-cripto.netlify.app/",
+        "tecnologias": [ "react", "emotion", "cryptocompare API"]
+      },
+      {
+        "id": 13,
+        "nombre": "control de gastos",
+        "año": 2022,
+        "link": "https://billetera-gastos-react.netlify.app/",
+        "tecnologias": [ "react", "CSS"]
+      },
+      {
+        "id": 14,
+        "nombre": "elise",
+        "año": 2021,
+        "link": "https://team-elise.netlify.app/",
+        "tecnologias": [ "HTML", "bootstrap", "javaScript", "leaflet"]
+      },
+      {
+        "id": 15,
+        "nombre": "pointer fotografia",
+        "año": 2021,
+        "link": "https://pointerfotografia.netlify.app/",
+        "tecnologias": [ "HTML", "SCSS", "javaScript"]
+      },
+      {
+        "id": 16,
+        "nombre": "modern arquitectura",
+        "año": 2021,
+        "link": "https://modernarquitectura.netlify.app/",
+        "tecnologias": [ "HTML", "CSS", "javaScript"]
+      },
+      {
+        "id": 17,
+        "nombre": "ink diversity",
+        "año": 2021,
+        "link": "https://inkdiversity.netlify.app/",
+        "tecnologias": [ "HTML", "SCSS", "javaScript"]
+      },
+      {
+        "id": 18,
+        "nombre": "arcoiris",
+        "año": 2021,
+        "link": "https://arcoiriskids.netlify.app/",
+        "tecnologias": [ "HTML", "sass", "javaScript"]
+      },
+      {
+        "id": 19,
+        "nombre": "skylink",
+        "año": 2020,
+        "link": "https://skylink.netlify.app/",
+        "tecnologias": [ "HTML", "SCSS", "javaScript"]
+      },
+      {
+        "id": 20,
+        "nombre": "exo surf",
+        "año": 2020,
+        "link": "https://exosurf.netlify.app/",
+        "tecnologias": [ "HTML", "CSS", "javaScript"]
+      },
+      {
+        "id": 21,
+        "nombre": "cypher",
+        "año": 2020,
+        "link": "https://cyphercs.netlify.app/",
+        "tecnologias": [ "HTML", "CSS", "javaScript"]
+      }
+
+    ]
