@@ -41,7 +41,7 @@ const { titulo, descripcion, año, link } = Astro.props;
     </div>
     <slot name="tecnologias" />
     <p
-      class="lg:text-secondary-white lg:group-hover:text-main-white custom-transition text-sm xl:text-base"
+      class="lg:text-secondary-white lg:group-hover:text-main-white font-medium custom-transition text-sm xl:text-base"
     >
       <span class="font-semibold">{año}</span> — {descripcion}
     </p>
