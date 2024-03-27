@@ -2,7 +2,7 @@ import type { Proyecto } from "../types/types";
 import odyssey from "../assets/odyssey.webp";
 import akira from "../assets/akira.webp";
 import movieverse from "../assets/movieverse.webp";
-import valorantWiki from "../assets/valorantwiki.webp";
+import valorantWiki from "../assets/valorantWiki.webp";
 
 export const listadoProyectos: Proyecto[] = [
   {
@@ -10,7 +10,7 @@ export const listadoProyectos: Proyecto[] = [
     titulo: "valorant wiki",
     año: "2024",
     descripcion:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ea commodi perferendis vel cupiditate perspiciatis. Quos quaerat cum adipisci illum, deserunt  nesciunt magni?",
+      "Sitio web dedicado a proporcionar información actualizada sobre Valorant. Desde análisis de personajes hasta informacion sobre armas, ofrece recursos para jugadores que buscan mejorar su comprensión y rendimiento.",
     link: "https://wikivalorant.vercel.app/",
     tecnologias: [
       {
@@ -33,7 +33,7 @@ export const listadoProyectos: Proyecto[] = [
     titulo: "odyssey",
     año: "2023",
     descripcion:
-      "Permite buscar, hacer un seguimiento según categorías y consultar información detallada de animes. También contiene información de personajes y personas relacionadas a la industria.",
+      "Odyssey es un sitio web para entusiastas del anime. Permite buscar, hacer un seguimiento según categorías y consultar información detallada de animes. También contiene información de personajes y personas relacionadas a la industria.",
     link: "https://odysseyanime.vercel.app/",
     tecnologias: [
       {
@@ -56,7 +56,7 @@ export const listadoProyectos: Proyecto[] = [
     titulo: "akira",
     año: "2023",
     descripcion:
-      "Obtiene información sobre productos y categorías a través de llamadas a  API. Permite buscar, filtrar, y ver en detalle miles de productos. También es posible agregar dichos productos a favoritos o a un carrito de compras.",
+      "Ecommerce de productos de indumentaria. Contiene busqueda, filtro y detalle de miles de productos. También es posible agregar productos a favoritos o a un carrito de compras.",
     link: "https://akira-ecommerce.vercel.app/",
     tecnologias: [
       {
